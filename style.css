@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Sans-Serif;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #111;
+	flex-direction: column;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.container {
+	position: relative;
+	margin-top: 250px;
+	max-width: 700px;
+	transform: skewY(-20deg);
+}
+
+.container .imgBx {
+	position: relative;
+	width: 100%;
+	transform-origin: bottom;
+	height: 180px;
+	transform: skewX(45deg);
+	margin-left: 100px;
+
+}
+
+.container .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 600px;
+	height: 180px;
+	filter: grayscale(1);
+	transition: 0.5s;
+}
+
+.container .imgBx:hover img:nth-child(3) {
+	transform: translate(100px, -100px);
+}
+
+.container .imgBx:hover img:nth-child(2) {
+	transform: translate(50px , -50px);
+	opacity: 0.5;
+}
+
+.container .imgBx:hover img:nth-child(1) {
+	transform: translate(0px , 0px);
+	opacity: 0.1;
+}
+
+.container h2 {
+	position: relative;
+	color: #fff;
+	margin-left: 100px;
+	font-size: 4em;
+}
+
+.container .sekw {
+	transform-origin: top;
+	transform: skewX(45deg);
+}
+
+.container .skew p {
+	color: #fff;
+	font-size: 1.2em;
+	width: 100%;
+	margin-left: 100px;
+}
+
+.container .skew a {
+	position: relative;
+	padding: 15px 40px;
+	margin-left: 100px;
+	display: inline-block;
+	background: transparent;
+	color: #fff;
+	transform-origin: top;
+	margin-top: 20px;
+	border: 2px solid #fff;
+	transform: skewX(45deg);
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-size: 25px;
+	transition: 0.5s;
+}
+
+.container .skew a:hover {
+	background: #fff;
+	color: #000;
+}
+
+@media screen and (max-width:800px) {
+
+	.container {
+		max-width: 500px;
+		margin-top: 150px;
+	}
+
+	.container .imgBx {
+		height: 80px;
+		margin-left: 80px;
+	}
+
+	.container .imgBx img {
+		width: 280px;
+		height: 80px;
+	}
+
+	.container h2 {
+		font-size: 2em;
+		margin-left: 80px;
+	}
+
+	.container .skew p {
+		font-size: 0.6em;
+		margin-left: 80px;
+		width: 78%;
+	}
+
+	.container .skew a {
+		font-size: 16px;
+		padding: 8px 26px;
+		margin-left: 80px;
+	}
+
+	.container .imgBx:hover img:nth-child(3) {
+		transform: translate(50px, -50px);
+	}
+
+	.container .imgBx:hover img:nth-child(2) {
+		transform: translate(25px , -25px);
+		opacity: 0.5;
+	}
+
+	.container .imgBx:hover img:nth-child(1) {
+		transform: translate(0px , 0px);
+		opacity: 0.1;
+	}
+
+}
